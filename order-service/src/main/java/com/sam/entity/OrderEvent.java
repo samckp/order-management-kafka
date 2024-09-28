@@ -1,7 +1,7 @@
-package com.sam.order.entity;
+package com.sam.entity;
 
 
-import com.sam.order.dto.enums.OrderStatus;
+import com.sam.dto.enums.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

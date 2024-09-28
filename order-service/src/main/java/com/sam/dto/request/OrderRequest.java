@@ -1,6 +1,6 @@
-package com.sam.order.dto.response;
+package com.sam.dto.request;
 
-import com.sam.order.dto.enums.OrderStatus;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,7 +8,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderResponse {
+public class OrderRequest {
     private String orderId;
-    private OrderStatus status;
+    private String name;
+    private int qty;
+    private double price;
+    private String userId;
+
 }

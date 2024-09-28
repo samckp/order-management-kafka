@@ -1,8 +1,8 @@
-package com.sam.order.controller;
+package com.sam.controller;
 
-import com.sam.order.dto.request.OrderRequest;
-import com.sam.order.dto.response.OrderResponse;
-import com.sam.order.service.OrderService;
+import com.sam.dto.request.OrderRequest;
+import com.sam.dto.response.OrderResponse;
+import com.sam.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,12 +1,11 @@
-package com.sam.order.service;
+package com.sam.service;
 
-
-import com.sam.order.dto.enums.OrderStatus;
-import com.sam.order.dto.request.OrderRequest;
-import com.sam.order.dto.response.OrderResponse;
-import com.sam.order.entity.OrderEvent;
-import com.sam.order.publisher.OrderEventKafkaPublisher;
-import com.sam.order.repository.OrderEventRepository;
+import com.sam.dto.enums.OrderStatus;
+import com.sam.dto.request.OrderRequest;
+import com.sam.dto.response.OrderResponse;
+import com.sam.entity.OrderEvent;
+import com.sam.publisher.OrderEventKafkaPublisher;
+import com.sam.repository.OrderEventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +19,6 @@ public class OrderService {
 
     @Autowired
     private OrderEventKafkaPublisher publisher;
-
 
     // Handle order creation
     public OrderResponse placeAnOrder(OrderRequest orderRequest) {
@@ -44,6 +42,4 @@ public class OrderService {
         repository.save(orderEvent);
         publisher.sendOrderEvent(orderEvent);
     }
-
-
 }

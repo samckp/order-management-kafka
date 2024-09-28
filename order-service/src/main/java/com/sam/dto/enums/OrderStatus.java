@@ -1,4 +1,4 @@
-package com.sam.order.dto.enums;
+package com.sam.dto.enums;
 
 
 public enum OrderStatus {
